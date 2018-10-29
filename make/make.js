@@ -1,23 +1,15 @@
-function make(...args) {
+module.exports = function make(...args) {
+  const lastIndex = args.length - 1;
+  const last = args[lastIndex]
+  
+  if (typeof last === "function") {
+    const rest = args.splice(0, lastIndex)
+    return rest.reduce(last);
+  } else {
+    return make.bind(null, ...args)
+ }
+}
 
-  let currentSum = args.reduce( function (rest, item) {
-    if (typeof item === 'number') {
-      return rest + item;
-    }
-  });
-
-  function inner(...num) {
-      currentSum += num.reduce( function (rest, item) {
-        if (typeof item === 'number') {
-          return rest + item;
-        }
-      });
-      return inner;
-  }
-
-  inner.toString = function() {
-    return currentSum;
-  };
-
-  return inner;
+function sum(a, b) {
+    return a + b;
 }
