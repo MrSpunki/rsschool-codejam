@@ -1,0 +1,25 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrSpunki/rsschool-codejam.git"
+  },
+  "author": "Maksim Zhyshkevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrSpunki/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/MrSpunki/rsschool-codejam#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0"
+  },
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
